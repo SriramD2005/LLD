@@ -7,6 +7,7 @@ public class ReadWrite {
         DataClass obj = new DataClass();
         for (int i = 0; i < 6; i++){
             new Thread(() -> {
+                obj.read();
                 obj.write(6);
                 System.out.println("Wrote 6");
             }).start();
